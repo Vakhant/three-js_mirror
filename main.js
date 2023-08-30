@@ -34,12 +34,10 @@ orbit.update()
 
 // -- HELPERS END --
 
-const mirrorGeometry = new THREE.PlaneGeometry( 110, 110 );
+const mirrorGeometry = new THREE.PlaneGeometry( 100, 100 );
 let groundMirror = new Reflector( mirrorGeometry, {
-	clipBias: 0.003,
 	textureWidth: window.innerWidth * window.devicePixelRatio,
 	textureHeight: window.innerHeight * window.devicePixelRatio,
-	color: 0xffffff
 } );
 groundMirror.rotateX( - Math.PI / 2 );
 scene.add( groundMirror );
