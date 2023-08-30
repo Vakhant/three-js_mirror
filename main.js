@@ -34,7 +34,7 @@ orbit.update()
 
 // -- HELPERS END --
 
-const mirrorGeometry = new THREE.PlaneGeometry( 110, 110);
+const mirrorGeometry = new THREE.PlaneGeometry( 110, 110 );
 let groundMirror = new Reflector( mirrorGeometry, {
 	clipBias: 0.003,
 	textureWidth: window.innerWidth * window.devicePixelRatio,
@@ -59,7 +59,7 @@ sphere.position.y = 3
 const assetsLoader = new GLTFLoader()
 assetsLoader.load(fileUrl.href, function(gltf){
 	const model = gltf.scene
-	model.scale.set(.01,.01,.01)
+	model.scale.set(10,10,10)
 	model.position.set( 10, 0, -10 );
 	scene.add(model)
 	console.log(model);
