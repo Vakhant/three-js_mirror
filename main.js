@@ -19,7 +19,6 @@ camera.lookAt( 0, 0, 0 );
 
 const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 1) // направленый свет
 directionalLight.position.set( 50, 50, 50 );
-directionalLight.castShadow = true // источник тени
 directionalLight.shadow.camera.bottom = -12 // увеличение полигона направленного источника света
 scene.add(directionalLight)
 
@@ -70,7 +69,7 @@ function(error){ // возвращает ошибки
 	console.error(error);
 })
 
-function animate(time) {
+function animate() {
 	
 	renderer.render( scene, camera );
 }
